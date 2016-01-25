@@ -11,12 +11,12 @@ import com.project.soap.webservices.helloservice.HelloWorldRequest;
 import com.project.soap.webservices.helloservice.HelloWorldResponse;
 
 @Endpoint
-public class HelloWorldEndpoint {
-
+public class HelloServiceEndpoint
+{
 	private static final String TARGET_NAMESPACE = "http://com/project/soap/webservices/helloservice";
 
 	@Autowired
-	private HelloService helloServiceInterfacObj;
+	private HelloService accountService_i;
 
 	/**
 	 * Gets the account details.
@@ -25,13 +25,18 @@ public class HelloWorldEndpoint {
 	 * @return the account details
 	 */
 	@PayloadRoot(localPart = "HelloWorldRequest", namespace = TARGET_NAMESPACE)
-	public @ResponsePayload HelloWorldResponse getHelloWorld(@RequestPayload HelloWorldRequest request)
+	public @ResponsePayload HelloWorldResponse getAccountDetails(@RequestPayload HelloWorldRequest request)
 	{
 		HelloWorldResponse response = new HelloWorldResponse();
 
 		/* call Spring injected service implementation to retrieve account data */
-		String message = helloServiceInterfacObj.getHelloWorld(request.getName());
-		response.setMessage(message);
+		response.setMessage(accountService_i.getHelloWorld(request.getName()));
+		
 		return response;
+	}
+
+	public void setAccountService(HelloService accountService_p)
+	{
+		this.accountService_i = accountService_p;
 	}
 }
