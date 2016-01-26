@@ -22,18 +22,11 @@ public class HelloServiceEndpoint
 	@Autowired
 	private HelloService helloWorld;
 
-	/**
-	 * Gets the account details.
-	 *
-	 * @param accountNumber the account number
-	 * @return the account details
-	 */
 	@PayloadRoot(localPart = "HelloWorldRequest", namespace = TARGET_NAMESPACE)
 	public @ResponsePayload HelloWorldResponse getHelloWorldMessage(@RequestPayload HelloWorldRequest request)
 	{
 		HelloWorldResponse response = new HelloWorldResponse();
 
-		/* call Spring injected service implementation to retrieve account data */
 		response.setMessage(helloWorld.getHelloWorld(request.getName()));
 		
 		return response;
@@ -44,7 +37,6 @@ public class HelloServiceEndpoint
 	{
 		HelloWorldTwoResponse response = new HelloWorldTwoResponse();
 
-		/* call Spring injected service implementation to retrieve account data */
 		response.setMessage(helloWorld.getHelloWorldTwo(request.getName()));
 		
 		return response;

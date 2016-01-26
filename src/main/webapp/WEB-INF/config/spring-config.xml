@@ -33,5 +33,21 @@
         <property name="serviceName" value="HelloWorldServices" />
         <property name="locationUri" value="/endpoints"/>
     </bean>
+    
+    <bean id="GameService" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition" lazy-init="true">
+        <property name="schemaCollection">
+            <bean class="org.springframework.xml.xsd.commons.CommonsXsdSchemaCollection">
+                <property name="inline" value="true" />
+                <property name="xsds">
+                    <list>
+                        <value>schemas/GameServiceOperation.xsd</value>
+                    </list>
+                </property>
+            </bean>
+        </property>
+        <property name="portTypeName" value="GameService"/>
+        <property name="serviceName" value="GameServices" />
+        <property name="locationUri" value="/endpoints"/>
+    </bean>
 
 </beans>
