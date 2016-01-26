@@ -22,15 +22,15 @@ public class GameServiceImpl implements GameService{
 	public String getGameType(String name) {
 		String type = null;
 		
-		if(name == GameConstants.ELDER_SCROLLS){
+		if(name.equals(GameConstants.ELDER_SCROLLS)){
 			type = GameConstants.RPG;
-		}else if(name == GameConstants.RIFT){
+		}else if(name.equals(GameConstants.RIFT)){
 			type = GameConstants.MMO;
-		}else if(name == GameConstants.WITCHER){
+		}else if(name.equals(GameConstants.WITCHER)){
 			type = GameConstants.RPG;
-		}else if(name == GameConstants.FF_7){
+		}else if(name.equals(GameConstants.FF_7)){
 			type = GameConstants.RPG;
-		}else if(name == GameConstants.WOW){
+		}else if(name.equals(GameConstants.WOW)){
 			type = GameConstants.MMO;
 		}
 		return type;
