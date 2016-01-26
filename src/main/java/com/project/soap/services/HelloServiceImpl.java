@@ -9,5 +9,9 @@ public class HelloServiceImpl implements HelloService{
 	
 		return "Hi "+ name + ", Welcome to a soap webservice!";
 	}
+	
+	public String getHelloWorldTwo(String name){
+		return "Hi "+ name + ", Welcome to a soap webservice operation # 2!";
+	}
 
 }

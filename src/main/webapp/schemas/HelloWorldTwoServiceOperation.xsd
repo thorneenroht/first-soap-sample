@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://com/project/soap/webservices/helloservice"
-	targetNamespace="http://com/project/soap/webservices/helloservice"
+	xmlns="http://com/project/soap/webservices/hellotwoservice"
+	targetNamespace="http://com/project/soap/webservices/hellotwoservice"
 	elementFormDefault="qualified">
-	<xsd:element name="HelloWorldRequest">
+	<xsd:element name="HelloWorldTwoRequest">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="name" type="xsd:string" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-	<xsd:element name="HelloWorldResponse">
+	<xsd:element name="HelloWorldTwoResponse">
 		<xsd:complexType>
 			<xsd:sequence>
 				<xsd:element name="message" type="xsd:string" />

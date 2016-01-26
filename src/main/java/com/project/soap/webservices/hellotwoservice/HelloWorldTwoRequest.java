@@ -6,7 +6,7 @@
 //
 
 
-package com.project.soap.webservices.helloservice;
+package com.project.soap.webservices.hellotwoservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "message"
+    "name"
 })
-@XmlRootElement(name = "HelloWorldResponse")
-public class HelloWorldResponse {
+@XmlRootElement(name = "HelloWorldTwoRequest")
+public class HelloWorldTwoRequest {
 
     @XmlElement(required = true)
-    protected String message;
+    protected String name;
 
     /**
-     * Gets the value of the message property.
+     * Gets the value of the name property.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getMessage() {
-        return message;
+    public String getName() {
+        return name;
     }
 
     /**
-     * Sets the value of the message property.
+     * Sets the value of the name property.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setMessage(String value) {
-        this.message = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
 }

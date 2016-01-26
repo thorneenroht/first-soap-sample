@@ -9,14 +9,18 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import com.project.soap.services.HelloService;
 import com.project.soap.webservices.helloservice.HelloWorldRequest;
 import com.project.soap.webservices.helloservice.HelloWorldResponse;
+import com.project.soap.webservices.hellotwoservice.HelloWorldTwoRequest;
+import com.project.soap.webservices.hellotwoservice.HelloWorldTwoResponse;
 
 @Endpoint
 public class HelloServiceEndpoint
 {
 	private static final String TARGET_NAMESPACE = "http://com/project/soap/webservices/helloservice";
+	
+	private static final String TARGET_NAMESPACETWO = "http://com/project/soap/webservices/hellotwoservice";
 
 	@Autowired
-	private HelloService accountService_i;
+	private HelloService helloWorld;
 
 	/**
 	 * Gets the account details.
@@ -25,18 +29,29 @@ public class HelloServiceEndpoint
 	 * @return the account details
 	 */
 	@PayloadRoot(localPart = "HelloWorldRequest", namespace = TARGET_NAMESPACE)
-	public @ResponsePayload HelloWorldResponse getAccountDetails(@RequestPayload HelloWorldRequest request)
+	public @ResponsePayload HelloWorldResponse getHelloWorldMessage(@RequestPayload HelloWorldRequest request)
 	{
 		HelloWorldResponse response = new HelloWorldResponse();
 
 		/* call Spring injected service implementation to retrieve account data */
-		response.setMessage(accountService_i.getHelloWorld(request.getName()));
+		response.setMessage(helloWorld.getHelloWorld(request.getName()));
 		
 		return response;
 	}
 
-	public void setAccountService(HelloService accountService_p)
+	@PayloadRoot(localPart = "HelloWorldTwoRequest", namespace = TARGET_NAMESPACETWO)
+	public @ResponsePayload HelloWorldTwoResponse getHelloWorldTwoMessage(@RequestPayload HelloWorldTwoRequest request)
 	{
-		this.accountService_i = accountService_p;
+		HelloWorldTwoResponse response = new HelloWorldTwoResponse();
+
+		/* call Spring injected service implementation to retrieve account data */
+		response.setMessage(helloWorld.getHelloWorldTwo(request.getName()));
+		
+		return response;
+	}
+	
+	public void setHelloService(HelloService helloWorld)
+	{
+		this.helloWorld = helloWorld;
 	}
 }

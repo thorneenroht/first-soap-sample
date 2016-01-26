@@ -6,7 +6,7 @@
 //
 
 
-package com.project.soap.webservices.helloservice;
+package com.project.soap.webservices.hellotwoservice;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.project.soap.webservices.helloservice package. 
+ * generated in the com.project.soap.webservices.hellotwoservice package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,26 +30,26 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.project.soap.webservices.helloservice
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.project.soap.webservices.hellotwoservice
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link HelloWorldResponse }
+     * Create an instance of {@link HelloWorldTwoResponse }
      * 
      */
-    public HelloWorldResponse createHelloWorldResponse() {
-        return new HelloWorldResponse();
+    public HelloWorldTwoResponse createHelloWorldTwoResponse() {
+        return new HelloWorldTwoResponse();
     }
 
     /**
-     * Create an instance of {@link HelloWorldRequest }
+     * Create an instance of {@link HelloWorldTwoRequest }
      * 
      */
-    public HelloWorldRequest createHelloWorldRequest() {
-        return new HelloWorldRequest();
+    public HelloWorldTwoRequest createHelloWorldTwoRequest() {
+        return new HelloWorldTwoRequest();
     }
 
 }

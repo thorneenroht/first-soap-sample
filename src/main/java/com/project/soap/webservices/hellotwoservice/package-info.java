@@ -5,5 +5,5 @@
 // Generated on: 2016.01.25 at 09:24:48 PM EST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://com/project/soap/webservices/helloservice", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.project.soap.webservices.helloservice;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://com/project/soap/webservices/hellotwoservice", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.project.soap.webservices.hellotwoservice;

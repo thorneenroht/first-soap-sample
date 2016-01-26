@@ -24,6 +24,7 @@
                 <property name="xsds">
                     <list>
                         <value>schemas/HelloWorldServiceOperation.xsd</value>
+                        <value>schemas/HelloWorldTwoServiceOperation.xsd</value>
                     </list>
                 </property>
             </bean>

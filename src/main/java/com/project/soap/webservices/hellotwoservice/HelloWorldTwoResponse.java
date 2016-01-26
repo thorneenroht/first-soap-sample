@@ -6,7 +6,7 @@
 //
 
 
-package com.project.soap.webservices.helloservice;
+package com.project.soap.webservices.hellotwoservice;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "message"
 })
-@XmlRootElement(name = "HelloWorldResponse")
-public class HelloWorldResponse {
+@XmlRootElement(name = "HelloWorldTwoResponse")
+public class HelloWorldTwoResponse {
 
     @XmlElement(required = true)
     protected String message;

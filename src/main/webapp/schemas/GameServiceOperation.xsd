@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://com/project/soap/webservices/gameservice"
+	targetNamespace="http://com/project/soap/webservices/gameservice"
+	elementFormDefault="qualified">
+	<xsd:element name="GetGamesListRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="GetGamesListResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="games" maxOccurs="unbounded"
+					minOccurs="0" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="GetGamesTypeRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="game" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="GetGamesTypeResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="type" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+
+</xsd:schema>
