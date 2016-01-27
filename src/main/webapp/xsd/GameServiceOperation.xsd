@@ -3,12 +3,7 @@
 	xmlns="http://com/project/soap/webservices/gameservice"
 	targetNamespace="http://com/project/soap/webservices/gameservice"
 	elementFormDefault="qualified">
-	<xsd:element name="GetGamesListRequest">
-		<xsd:complexType>
-			<xsd:sequence>
-			</xsd:sequence>
-		</xsd:complexType>
-	</xsd:element>
+	<xsd:element name="GetGamesListRequest"/>
 	<xsd:element name="GetGamesListResponse">
 		<xsd:complexType>
 			<xsd:sequence>
@@ -31,6 +26,4 @@
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
-
-
 </xsd:schema>
