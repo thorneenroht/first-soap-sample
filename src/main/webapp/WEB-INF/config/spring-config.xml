@@ -23,8 +23,8 @@
                 <property name="inline" value="true" />
                 <property name="xsds">
                     <list>
-                        <value>schemas/HelloWorldServiceOperation.xsd</value>
-                        <value>schemas/HelloWorldTwoServiceOperation.xsd</value>
+                        <value>xsd/HelloWorldServiceOperation.xsd</value>
+                        <value>xsd/HelloWorldTwoServiceOperation.xsd</value>
                     </list>
                 </property>
             </bean>
@@ -40,7 +40,7 @@
                 <property name="inline" value="true" />
                 <property name="xsds">
                     <list>
-                        <value>schemas/GameServiceOperation.xsd</value>
+                        <value>xsd/GameServiceOperation.xsd</value>
                     </list>
                 </property>
             </bean>
